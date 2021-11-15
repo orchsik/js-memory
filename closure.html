@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <button onclick="myClick()">execute fn1</button>
+    <script>
+      function fn1() {
+        const a = new Array(10000).fill(1);
+        const b = 3;
+
+        function fn2() {
+          const c = [1, 2, 3];
+        }
+        fn2();
+        return a;
+      }
+
+      const res = [];
+      function myClick() {
+        res.push(fn1());
+      }
+      console.log(res);
+    </script>
+  </body>
+</html>
